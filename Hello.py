@@ -46,6 +46,8 @@ def run():
     """
     )
 
+    print(os.environ.get("OPENAI_API_KEY"))
+
 
 if __name__ == "__main__":
     run()
