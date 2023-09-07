@@ -13,26 +13,21 @@
 # limitations under the License.
 
 import streamlit as st
-from streamlit.logger import get_logger
 import os
-LOGGER = get_logger(__name__)
 
 
-def run():
-    st.set_page_config(
-        page_title="Hello",
-        page_icon="👋",
-    )
 
-    st.write("# Welcome to Streamlit v 0.3! 👋")
+st.set_page_config(
+    page_title="Hello",
+    page_icon="👋",
+)
+
+st.write("# Welcome to Streamlit v 0.4! 👋")
+
+st.write('print via write', os.environ["OPENAI_API_KEY"])
+
+st.write("end of page")
+
+st.sidebar.success("Select a demo above.")
+
     
-    st.write(print('print via write', os.environ["OPENAI_API_KEY"]))
-    
-
-    st.sidebar.success("Select a demo above.")
-
-    
-
-
-if __name__ == "__main__":
-    run()
